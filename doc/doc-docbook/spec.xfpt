@@ -18654,7 +18654,8 @@ avoided. The &%repeat_use%& option of the &%redirect%& router may be of help.
 This option specifies a list of text headers,
 colon-separated (by default, changeable in the usual way &<<SECTlistsepchange>>&),
 that is associated with any addresses that are accepted by the router.
-Each item is separately expanded, at routing time.  However, this
+Each item is separately expanded, at routing time.  If an item
+ends in *, it will match any header with the same prefix.  However, this
 option has no effect when an address is just being verified. The way in which
 the text is used to remove header lines at transport time is described in
 section &<<SECTheadersaddrem>>&. Header lines are not actually removed until
